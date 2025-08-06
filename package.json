@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "echo 'no build script'"
+     "build": "[my-framework] build --output public"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
