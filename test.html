@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Simonter Way</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#0F172A',
+                        accent: '#10B981',
+                        dark: '#1E293B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        .hero-pattern {
+            background: radial-gradient(circle, rgba(79,70,229,0.1) 0%, rgba(255,255,255,0) 70%);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .glow {
+            text-shadow: 0 0 20px rgba(79, 70, 229, 0.7);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .animate-delay-100 {
+            animation-delay: 0.1s;
+        }
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+        .animate-delay-300 {
+            animation-delay: 0.3s;
+        }
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+        .person-img {
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .testimonial-card {
+            transition: all 0.4s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+            color: #4F46E5;
+        }
+        .app-screen {
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="bg-primary w-10 h-10 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">S</span>
+                        </div>
+                        <span class="ml-3 text-primary font-display font-bold text-xl tracking-wide">SIMONTER</span>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="#" class="text-primary border-b-2 border-primary px-1 pt-1 font-medium">Home</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-1 pt-1 font-medium">Features</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-1 pt-1 font-medium">About</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-1 pt-1 font-medium">Testimonials</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-1 pt-1 font-medium">Pricing</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition transform hover:-translate-y-0.5">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative hero-pattern pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="text-center">
+                <div class="inline-block bg-primary bg-opacity-10 px-4 py-2 rounded-full mb-6 animate-pulse">
+                    <span class="text-primary font-medium">New Release: Version 3.0</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-display font-extrabold tracking-tight">
+                    <span class="block">The Simonter Way</span>
+                    <span class="block text-primary mt-2 animate-pulse-slow">She's a human inspiration</span>
+                </h1>
+                <p class="mt-6 text-xl max-w-3xl mx-auto text-gray-600">
+                    A revolutionary approach to personal growth and mindfulness. Discover your true potential through guided experiences.
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <button class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition transform hover:-translate-y-1 shadow-lg shadow-primary/30">
+                        Start Your Journey
+                    </button>
+                    <button class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/10 transition transform hover:-translate-y-1">
+                        <i class="fas fa-play-circle mr-2"></i>Watch Demo
+                    </button>
+                </div>
+                <div class="mt-16 max-w-5xl mx-auto">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl p-2">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-image text-5xl text-gray-400 mb-4"></i>
+                                <p class="text-gray-500">App Dashboard Screenshot</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome to Emily Section -->
+    <div class="bg-gradient-to-br from-white to-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight">
+                        <span class="block">Welcome to</span>
+                        <span class="block text-primary mt-2 animate-float">Emily</span>
+                    </h2>
+                    <p class="mt-6 text-xl text-gray-600 max-w-2xl">
+                        Emily is your personal guide on the Simonter Way. With her intuitive approach and empathetic nature, she helps you navigate life's challenges with grace and resilience.
+                    </p>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-primary rounded-full p-3">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <p class="ml-4 font-medium text-lg">Personalized guidance tailored to your needs</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-primary rounded-full p-3">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <p class="ml-4 font-medium text-lg">Available 24/7 through our mobile app</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-primary rounded-full p-3">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <p class="ml-4 font-medium text-lg">Proven techniques for emotional wellbeing</p>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <button class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition flex items-center">
+                            <i class="fas fa-comment-alt mr-2"></i> Chat with Emily
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0 lg:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -top-8 -left-8 w-64 h-64 bg-purple-200 rounded-full opacity-50 animate-pulse"></div>
+                        <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-teal-200 rounded-full opacity-50 animate-pulse"></div>
+                        <div class="relative z-10">
+                            <div class="w-80 h-80 rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <i class="fas fa-user text-8xl text-gray-400 mb-4"></i>
+                                        <p class="text-gray-500">Emily Portrait</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calmer Section -->
+    <div class="bg-gradient-to-br from-primary to-indigo-700 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-5xl md:text-7xl font-display font-bold text-white glow animate-pulse-slow">
+                    CALMER
+                </h2>
+                <p class="mt-4 text-2xl text-indigo-100 max-w-3xl mx-auto">
+                    Our innovative approach to mindfulness and emotional well-being
+                </p>
+                
+                <div class="mt-16 grid gap-8 md:grid-cols-3">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-left card-hover transition-all duration-500">
+                        <div class="text-indigo-200 text-5xl mb-4 feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Mindfulness</h3>
+                        <p class="mt-4 text-indigo-100">
+                            Techniques to stay present and focused, reducing anxiety and improving mental clarity with daily exercises.
+                        </p>
+                        <div class="mt-6">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">5-minute daily exercises</span>
+                            </div>
+                            <div class="flex items-center mt-2">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">Guided meditation library</span>
+                            </div>
+                            <div class="flex items-center mt-2">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">Focus enhancement</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-left card-hover transition-all duration-500">
+                        <div class="text-indigo-200 text-5xl mb-4 feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Emotional Balance</h3>
+                        <p class="mt-4 text-indigo-100">
+                            Learn to navigate emotional challenges with grace and maintain inner peace through our proven methods.
+                        </p>
+                        <div class="mt-6">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">Mood tracking</span>
+                            </div>
+                            <div class="flex items-center mt-2">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">Stress management</span>
+                            </div>
+                            <div class="flex items-center mt-2">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">Emotional intelligence</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-left card-hover transition-all duration-500">
+                        <div class="text-indigo-200 text-5xl mb-4 feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Community</h3>
+                        <p class="mt-4 text-indigo-100">
+                            Connect with others on the same journey for support and shared experiences in a safe environment.
+                        </p>
+                        <div class="mt-6">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">Support groups</span>
+                            </div>
+                            <div class="flex items-center mt-2">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">Expert sessions</span>
+                            </div>
+                            <div class="flex items-center mt-2">
+                                <div class="w-3 h-3 rounded-full bg-white mr-2"></div>
+                                <span class="text-indigo-100">Accountability partners</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Assistant Section -->
+    <div class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">
+                    Our Assistant
+                </h2>
+                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                    Meet the technology that makes personal transformation accessible to everyone
+                </p>
+                
+                <div class="mt-16 flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <div class="relative">
+                            <div class="absolute top-0 left-0 w-64 h-64 bg-purple-100 rounded-full -z-10 animate-pulse"></div>
+                            <div class="app-screen bg-gray-800 w-80 h-96 mx-auto rounded-3xl overflow-hidden shadow-2xl">
+                                <div class="h-8 bg-gray-700 flex items-center px-4">
+                                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <div class="p-6 h-full flex flex-col">
+                                    <div class="flex items-center mb-6">
+                                        <div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center">
+                                            <i class="fas fa-robot text-white text-2xl"></i>
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="font-bold text-white">Emily</div>
+                                            <div class="text-green-400 text-sm">Online</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow bg-gray-900 rounded-xl p-4 mb-4">
+                                        <div class="bg-gray-700 rounded-lg p-3 mb-3 w-3/4">
+                                            <div class="h-2 bg-gray-600 rounded w-3/4 mb-2"></div>
+                                            <div class="h-2 bg-gray-600 rounded w-1/2"></div>
+                                        </div>
+                                        <div class="bg-gray-700 rounded-lg p-3 mb-3 w-3/4">
+                                            <div class="h-2 bg-gray-600 rounded w-2/3 mb-2"></div>
+                                            <div class="h-2 bg-gray-600 rounded w-1/3"></div>
+                                        </div>
+                                        <div class="bg-primary rounded-lg p-3 ml-auto w-3/4">
+                                            <div class="h-2 bg-white rounded w-full mb-2"></div>
+                                            <div class="h-2 bg-white rounded w-2/3"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="text" class="flex-grow bg-gray-700 text-white rounded-l-lg px-4" placeholder="Type a message...">
+                                        <button class="bg-primary text-white px-4 rounded-r-lg">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-16 text-left">
+                        <h3 class="text-3xl font-bold mb-6">AI-Powered Guidance</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our intelligent assistant combines cutting-edge artificial intelligence with proven psychological principles to provide personalized guidance tailored to your unique needs.
+                        </p>
+                        <p class="text-gray-600 mb-8">
+                            Available 24/7 through our mobile app, Emily is always ready to help you navigate challenges and celebrate your successes.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="flex items-center">
+                                <div class="bg-primary bg-opacity-10 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-sync-alt text-primary"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="font-bold">Real-time Analysis</div>
+                                    <div class="text-gray-500 text-sm">Understand your emotions</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-primary bg-opacity-10 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-primary"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="font-bold">Progress Tracking</div>
+                                    <div class="text-gray-500 text-sm">Visualize your journey</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-primary bg-opacity-10 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-book text-primary"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="font-bold">Learning Resources</div>
+                                    <div class="text-gray-500 text-sm">Curated content library</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-primary bg-opacity-10 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-bell text-primary"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <div class="font-bold">Daily Reminders</div>
+                                    <div class="text-gray-500 text-sm">Stay on track</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fear Your Course Section -->
+    <div class="bg-gradient-to-br from-secondary to-dark py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white">
+                    Fear Your Course
+                </h2>
+                <p class="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">
+                    Embrace the journey of personal transformation with courage and determination
+                </p>
+                
+                <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="bg-gradient-to-br from-gray-800 to-dark rounded-2xl p-8 card-hover transition-all duration-500 animate-fade-in animate-delay-100">
+                        <div class="text-accent text-5xl mb-6">
+                            <div class="bg-accent bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center">
+                                <span class="text-4xl">1</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Acknowledge</h3>
+                        <p class="text-gray-300">
+                            Recognize your fears and understand their origins without judgment. Awareness is the first step to transformation.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-800 to-dark rounded-2xl p-8 card-hover transition-all duration-500 animate-fade-in animate-delay-200">
+                        <div class="text-accent text-5xl mb-6">
+                            <div class="bg-accent bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center">
+                                <span class="text-4xl">2</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Confront</h3>
+                        <p class="text-gray-300">
+                            Face challenges with courage and resilience. Develop strategies to overcome obstacles standing in your way.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-800 to-dark rounded-2xl p-8 card-hover transition-all duration-500 animate-fade-in animate-delay-300">
+                        <div class="text-accent text-5xl mb-6">
+                            <div class="bg-accent bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center">
+                                <span class="text-4xl">3</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Transform</h3>
+                        <p class="text-gray-300">
+                            Turn fear into fuel for personal growth. Reshape your mindset and embrace new possibilities for your life.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-gray-800 to-dark rounded-2xl p-8 card-hover transition-all duration-500 animate-fade-in animate-delay-400">
+                        <div class="text-accent text-5xl mb-6">
+                            <div class="bg-accent bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center">
+                                <span class="text-4xl">4</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Thrive</h3>
+                        <p class="text-gray-300">
+                            Achieve your full potential and live fearlessly. Maintain your growth and help others on their journey.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-20 bg-gradient-to-r from-primary to-accent rounded-3xl p-10 max-w-4xl mx-auto shadow-xl transform transition-all duration-500 hover:scale-[1.02]">
+                    <h3 class="text-3xl font-bold text-white text-center">Begin Your Transformation Today</h3>
+                    <p class="mt-4 text-gray-100 text-center max-w-2xl mx-auto">
+                        Join thousands who have already transformed their lives through The Simonter Way. Our proven methodology and supportive community will guide you every step of the journey.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-secondary px-8 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition shadow-lg">
+                            Start Free Trial
+                        </button>
+                        <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
+                            <i class="fas fa-calendar-alt mr-2"></i> Book a Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">
+                    What Our Users Say
+                </h2>
+                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                    Hear from people who transformed their lives with The Simonter Way
+                </p>
+                
+                <div class="mt-16 grid gap-8 md:grid-cols-3">
+                    <div class="testimonial-card bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 person-img bg-gray-200 border-2 border-dashed"></div>
+                            <div class="ml-4">
+                                <div class="font-bold">Sarah Johnson</div>
+                                <div class="text-gray-500">Marketing Director</div>
+                                <div class="flex text-yellow-400 mt-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">
+                            "Emily has been a game-changer for my mental health. The mindfulness techniques helped me reduce anxiety and improve focus at work."
+                        </p>
+                    </div>
+                    
+                    <div class="testimonial-card bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 person-img bg-gray-200 border-2 border-dashed"></div>
+                            <div class="ml-4">
+                                <div class="font-bold">Michael Chen</div>
+                                <div class="text-gray-500">Software Engineer</div>
+                                <div class="flex text-yellow-400 mt-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">
+                            "The emotional balance tools transformed how I handle stress. I've never felt more in control of my reactions and emotions."
+                        </p>
+                    </div>
+                    
+                    <div class="testimonial-card bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 person-img bg-gray-200 border-2 border-dashed"></div>
+                            <div class="ml-4">
+                                <div class="font-bold">Priya Sharma</div>
+                                <div class="text-gray-500">Teacher</div>
+                                <div class="flex text-yellow-400 mt-1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">
+                            "The community support is incredible. Knowing I'm not alone in my journey has made all the difference in my personal growth."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="bg-primary w-10 h-10 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">S</span>
+                        </div>
+                        <span class="ml-3 text-white font-display font-bold text-xl tracking-wide">SIMONTER</span>
+                    </div>
+                    <p class="mt-4 text-gray-400">
+                        Personal transformation through mindful technology and human inspiration.
+                    </p>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold">Company</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold">Resources</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Community</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Research</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold">Subscribe</h4>
+                    <p class="mt-4 text-gray-400">
+                        Get the latest updates and tips from The Simonter Way
+                    </p>
+                    <div class="mt-4 flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg bg-gray-800 text-white">
+                        <button class="bg-primary px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 The Simonter Way. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

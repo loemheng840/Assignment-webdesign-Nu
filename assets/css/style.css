@@ -1,0 +1,149 @@
+/* Custom styles for Shelly School Center */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* assets/css/style.css */
+
+/* Define font families */
+:root {
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary:'Poppins', sans-serif;
+}
+
+/* Global font style */
+body {
+  font-family: var(--font-primary);
+  
+}
+
+/* Example usage of secondary font */
+h1, h2, h3, h4, h5, h6,
+.block-title, .section-heading {
+  font-family: var(--font-secondary);
+}
+
+/* Active navigation link */
+.nav-link.active {
+  color: #ff6b35 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #ff6b35;
+  padding-bottom: 4px;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Hover effects for cards */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #ff6b35 0%, #ffb800 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #e55a2b 0%, #e6a600 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Loading animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form focus styles */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+  transition: all 0.5s ease;
+}
+
+#mobile-menu.show {
+  display: block;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+  .gradient-bg {
+   background: linear-gradient(to right, #ff8c42, #ffc042, #f0f0f0); /* Orange to light orange/white gradient */
+    }
+        /* Custom focus styles for inputs */
+    input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 140, 66, 0.5); /* Orange shadow on focus */
+    }
+
+    iframe{
+      border: solid rgb(140, 124, 124) 2px;
+      border-radius: 12px;
+    }

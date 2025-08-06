@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - Shelly School Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange-primary': '#FF6B35',
+                        'orange-secondary': '#FFB800',
+                        'teal-primary': '#4ECDC4',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r  from-orange-50 to-gray-50 py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold text-orange-200 mb-4">Our Classes</h1>
+            <p class="text-xl text-orange-200 opacity-90">Discover our comprehensive curriculum</p>
+        </div>
+    </section>
+
+    <!-- Classes Grid -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto md:px-20">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Class Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course15.jpg" 
+                         alt="Basic Programing" 
+                         class="w-full h-50 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Basic Programing</h3>
+                            <span class="bg-orange-primary text-white px-3 py-1 rounded-full text-sm">2-4 weeks</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Variables, Data Types, Loops, Conditions, Functions, Basic Debugging
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$60/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course02.jpg" 
+                         alt="Web Design" 
+                         class="w-full h-50 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Web Design</h3>
+                            <span class="bg-teal-primary text-white px-3 py-1 rounded-full text-sm">3-6 weeks</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            HTML, CSS, Tailwind/Bootstrap, Figma (optional), Responsive Design, UX Principles
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$80/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course03.jpg" 
+                         alt="Bankend" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Web Backend</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">2-3 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Unleash creativity through various art forms,Server-side languages (Node.js, Python, Java), REST APIs, Database (MySQL/MongoDB), Authentication crafts, and creative projects that develop fine motor skills and artistic expression.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$200/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Card 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                   <img src="/assets/image/course04.jpg" 
+                         alt="Mobile App" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Web Fullstack</h3>
+                            <span class="bg-orange-primary text-white px-3 py-1 rounded-full text-sm">2-3 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Develop reading, writing, and communication skills through engaging literature, creative writing, and language exploration.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$280/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Card 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                   <img src="/assets/image/course05.jpg" 
+                         alt="NetWork" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Graphic Design</h3>
+                            <span class="bg-teal-primary text-white px-3 py-1 rounded-full text-sm">2-3 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                           Photoshop, Illustrator, Canva, Design Theory (Color, Typography), Portfolio creation
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$200/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Card 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                   <img src="/assets/image/course06.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Mobile App</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">4-6 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                             Programming	Flutter/Dart or React Native, UI components, API Integration, State Management, Firebase
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$300/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                   <img src="/assets/image/course07.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">CyberSecurity</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">6-12 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Networking Basics, Kali Linux, Encryption, Vulnerability Testing, Web Security, CEH topics
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$350/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course08.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Data Science</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">6-9 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                             Statistics	Pandas, NumPy, Matplotlib, Data Cleaning, Visualization, Scikit-learn, Real-world projects
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$400/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course09.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Machine Learning</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">6-9 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                           Supervised/Unsupervised ML, Regression, Classification, Neural Networks, Scikit-learn, TensorFlow/PyTorch
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$400/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course10.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">DevOps</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">6-9 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            CI/CD, Docker, Kubernetes, Jenkins, Git, AWS/GCP, Infrastructure as Code (IaC), Monitoring
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$90/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course11.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Microservice</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">4-6 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                             Spring Boot/NestJS, Docker, API Gateway, Service Discovery, Load Balancing, Testing
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$400/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course12.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Blockchain</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">6-9 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                           Ethereum, Solidity, Smart Contracts, Web3.js, Wallets, Gas Fees, Decentralized Apps (DApps)
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$400/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course13.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">ITP</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">6-9 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                           Networking, System Admin, Hardware, Software Troubleshooting, Security, Ticketing Systems, Certifications (CompTIA A+)
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$400/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/course16.jpg" 
+                         alt="DevOp" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Data Analytics</h3>
+                            <span class="bg-orange-secondary text-white px-3 py-1 rounded-full text-sm">6-9 months</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                           Excel, SQL, Power BI/Tableau, Google Sheets, Data Cleaning, Charts, Reports, Business Understanding
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-primary font-bold">$400/course</span>
+                            <button class="bg-orange-primary text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

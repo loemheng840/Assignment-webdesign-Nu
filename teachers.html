@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers - Shelly School Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange-primary': '#FF6B35',
+                        'orange-secondary': '#FFB800',
+                        'teal-primary': '#4ECDC4',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-orange-50 to-gray-50 py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold  text-orange-200 mb-4">Our Teachers</h1>
+            <p class="text-xl  text-orange-200 opacity-90">Meet our dedicated educators</p>
+        </div>
+    </section>
+
+    <!-- Teachers Grid -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto md:px-20">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teacher Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/teacher01.jpg" 
+                         alt="Sarah Johnson" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sarah Johnson</h3>
+                        <p class="text-orange-primary font-semibold mb-3">Data Science</p>
+                        <p class="text-gray-600 mb-4">
+                            M.Ed in Data Science Education with 8 years of experience. Specializes in making complex concepts simple and engaging.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/teacher02.jpg" 
+                         alt="Michael Chen" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Michael Chen</h3>
+                        <p class="text-orange-primary font-semibold mb-3">Data analytics</p>
+                        <p class="text-gray-600 mb-4">
+                            Ph.D in Data analysis with 5 years of teaching experience. Passionate about hands-on learning and scientific discovery.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/teacher03.jpg" 
+                         alt="Emily Rodriguez" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Emily Rodriguez</h3>
+                        <p class="text-orange-primary font-semibold mb-3">Web Development</p>
+                        <p class="text-gray-600 mb-4">
+                            BFA in Fine Arts with 6 years of experience. Believes in nurturing creativity and self-expression in every child.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher Card 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/teacher04.jpg" 
+                         alt="David Thompson" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">David Thompson</h3>
+                        <p class="text-orange-primary font-semibold mb-3">DevOps</p>
+                        <p class="text-gray-600 mb-4">
+                            M.A in DevOps Literature with 5 years of experience. Passionate about developing strong communication skills.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher Card 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/teacher06.jpg" 
+                         alt="Lisa Williams" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Lisa Williams</h3>
+                        <p class="text-orange-primary font-semibold mb-3">Moblie App</p>
+                        <p class="text-gray-600 mb-4">
+                            B.Mus in Moblie App Education with 9 years of experience. Specializes in piano, violin, and music theory.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teacher Card 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="/assets/image/teacher05.jpg" 
+                         alt="James Brown" 
+                         class="w-full h-100 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">James Brown</h3>
+                        <p class="text-orange-primary font-semibold mb-3">CyberSecurity</p>
+                        <p class="text-gray-600 mb-4">
+                            B.S in Kinesiology with 7 years of experience. Focuses on Security Attrack Define and teamwork skills.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-gray-800">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
