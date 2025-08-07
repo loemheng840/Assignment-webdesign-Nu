@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Shelly School Center</title>
+    <title>Blog - EDU School Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,8 +24,7 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <div id="header-placeholder"></div>
-
+        <div data-include="../components/header.html"></div>
     <!-- Page Header -->
     <section class="bg-gradient-to-r from-orange-50 to-gray-50 py-20">
         <div class="container mx-auto px-4 text-center">
@@ -153,10 +152,6 @@
                                      alt="Recent post" 
                                      class="w-15 h-15 rounded object-cover">
                             </div>
-                                  <video class="rounded-xl w-[500px]" autoplay loop muted>
-                                        <source src="/assets/image/2c7a9d6ae96ec3a04428d8631035e392.mp4" type="video/mp4">
-                            <div class="flex space-x-3">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,8 +160,8 @@
     </section>
 
     <!-- Footer -->
-    <div id="footer-placeholder"></div>
-
-    <script src="assets/js/main.js"></script>
+    <div data-include="../components/Footer.html"></div>
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

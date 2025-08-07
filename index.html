@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelly - School Center | Home</title>
+    <title>EDU - School Center | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    
+    <link rel="icon" type="image/png" href="/logo.png"/>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
@@ -113,7 +113,7 @@
                 At EDU School Center, we believe every child deserves the best education. Our innovative teaching methods and experienced educators create an environment where learning becomes an adventure.
             </p>
             
-            <div class="grid md:grid-cols-3 gap-8 ">
+            <div class="grid lg:grid-cols-3 gap-8 ">
                 <div class="text-center p-6 rounded-3xl  bg-gray-50">
                     <div class="w-16 h-16 bg-orange-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-graduation-cap text-white text-2xl"></i>
@@ -217,47 +217,7 @@
     </div>
   </div>
 </div>
-<style>
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.animate-scroll-left {
-  animation: scrollLeft 30s linear infinite;
-}
-</style>
-<script>
-  const topRow = document.querySelector('.animate-scroll-left');
-  const topTemplate = document.getElementById('top-images');
 
-  // Duplicate the template twice for infinite loop
-  for (let i = 0; i < 2; i++) {
-    topRow.append(...topTemplate.content.cloneNode(true).children);
-  }
-
-  // Lightbox Logic
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxCaption = document.getElementById("lightbox-caption");
-
-  document.querySelectorAll(".group\\/card").forEach(card => {
-    card.addEventListener("click", () => {
-      const img = card.querySelector("img");
-      const caption = card.querySelector("span");
-      lightboxImg.src = img.src;
-      lightboxCaption.textContent = caption.textContent;
-      lightbox.classList.remove("hidden");
-    });
-  });
-
-  function closeLightbox() {
-    lightbox.classList.add("hidden");
-  }
-
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-</script>
 
     </section>
 
@@ -452,9 +412,9 @@
                     Stay updated with the latest trends in education and technology.
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="AI in Education" class="w-full h-48 object-cover">
+                    <img src="/assets/image/recent02.jpg" alt="AI in Education" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-orange-primary font-medium mb-2">Education Technology</div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">The Future of AI in Online Learning</h3>
@@ -467,7 +427,7 @@
                     </div>
                 </article>
                 <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="Remote Learning" class="w-full h-48 object-cover">
+                    <img src="/assets/image/recent03.jpg" alt="Remote Learning" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-orange-primary font-medium mb-2">Learning Tips</div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">10 Tips for Effective Remote Learning</h3>
@@ -480,7 +440,7 @@
                     </div>
                 </article>
                 <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop" alt="Career Growth" class="w-full h-48 object-cover">
+                    <img src="/assets/image/recent01.jpg" alt="Career Growth" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="text-sm text-orange-primary font-medium mb-2">Career Development</div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">How Online Courses Boost Your Career</h3>
@@ -536,9 +496,7 @@
                 class="w-full p-4 rounded-xl border border-gray-300 focus:border-orange-500 transition duration-200 ease-in-out hover:shadow-md resize-none"
             ></textarea>
         </div>
-
     </div>
-
         </div>
     </section>
     <!-- Footer -->

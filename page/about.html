@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Shelly School Center</title>
+    <title>About Us - EDU School Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -24,8 +25,8 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <div id="header-placeholder"></div>
-
+    <div data-include="../components/header.html"></div>
+    
     <!-- Page Header -->
     <section class="bg-gradient-to-r from-orange-50 to-gray-50 py-20">
         <div class="container mx-auto px-4 text-center">
@@ -110,10 +111,10 @@
                     EDU Center have four Dericter who build and develops that can help students  .
                 </p>
             </div>
-        <div class="container mx-auto grid md:grid-cols-4 lg:px-20 gap-10">
+        <div class="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 lg:px-20 gap-10">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 text-center">
                     <div class="flex flex-col items-center p-6">
-                        <img src="/assets/image/teacher09.jpg" alt="Web Development" class="w-60 h-60 object-cover p-5 rounded-full">
+                        <img src="/assets/image/teacher08.jpg" alt="Web Development" class="w-60 h-60 object-cover p-5 rounded-full">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Mr. Jenh Dara</h3>
                         <p class="text-gray-600 mb-4">Studied Environmental Science (BSc) and Education (MEd). Started a school garden program in 2012 to teach sustainability through hands-on farming.</p>
                         <div class="flex items-center justify-center">
@@ -133,7 +134,7 @@
                 </div>
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 text-center">
                     <div class="flex flex-col items-center p-6">
-                        <img src="/assets/image/teacher09.jpg" alt="Web Development" class="w-60 h-60 object-cover p-5 rounded-full">
+                        <img src="/assets/image/teacher05.jpg" alt="Web Development" class="w-60 h-60 object-cover p-5 rounded-full">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Mr. Ben Satin</h3>
                         <p class="text-gray-600 mb-4">Studied Agricultural Education (BSc) and Rural Development (Master’s). Trains students and young farmers using school farms and local projects.</p>
                         <div class="flex items-center justify-center">
@@ -143,7 +144,7 @@
                 </div>
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 text-center">
                     <div class="flex flex-col items-center p-6">
-                        <img src="/assets/image/teacher09.jpg" alt="Web Development" class="w-60 h-60 object-cover p-5 rounded-full">
+                        <img src="/assets/image/teacher06.jpg" alt="Web Development" class="w-60 h-60 object-cover p-5 rounded-full">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Mr. Tes Tongly</h3>
                         <p class="text-gray-600 mb-4">Studied Environmental Science (BSc) and Education (MEd). Started a school garden program in 2012 to teach sustainability through hands-on farming.</p>
                         <div class="flex items-center justify-center">
@@ -153,7 +154,7 @@
                 </div>
         </div>
     </section>
-    <section class="py-10 bg-white px-4 lg:px-20">
+    <!-- <section class="py-10 bg-white px-4 lg:px-20">
         <div class="grid md:grid-cols-3 gap-12 ">
                 <div>
                     <div class="bg-gray-50 p-8 rounded-lg">
@@ -192,12 +193,13 @@
                     Something
                 </div>
         </div>
-    </section>
+    </section> -->
     <div>
     </div>
     <!-- Footer -->
-    <div id="footer-placeholder"></div>
-    <script src="assets/js/main.js"></script>
+     <div data-include="../components/Footer.html"></div>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/include.js"></script>
     <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
 </body>
 </html>

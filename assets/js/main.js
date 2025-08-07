@@ -78,7 +78,6 @@ function setActiveNavLink() {
     }
   })
 }
-
 // Initialize mobile menu functionality
 function initMobileMenu() {
   const mobileMenuBtn = document.getElementById("mobile-menu-btn")
@@ -283,5 +282,35 @@ document.addEventListener("click", (e) => {
 console.log("%c🍃 Welcome to Shelly School Center! 🍃", "color: #FF6B35; font-size: 16px; font-weight: bold;")
 console.log("%cBuilt with HTML, Tailwind CSS, and JavaScript", "color: #4ECDC4; font-size: 12px;")
 
+// slide in index html
+  const topRow = document.querySelector('.animate-scroll-left');
+  const topTemplate = document.getElementById('top-images');
 
+  // Duplicate the template twice for infinite loop
+  for (let i = 0; i < 2; i++) {
+    topRow.append(...topTemplate.content.cloneNode(true).children);
+  }
+
+  // Lightbox Logic
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+
+  document.querySelectorAll(".group\\/card").forEach(card => {
+    card.addEventListener("click", () => {
+      const img = card.querySelector("img");
+      const caption = card.querySelector("span");
+      lightboxImg.src = img.src;
+      lightboxCaption.textContent = caption.textContent;
+      lightbox.classList.remove("hidden");
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.add("hidden");
+  }
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
 

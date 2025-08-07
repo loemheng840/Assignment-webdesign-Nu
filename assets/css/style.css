@@ -147,3 +147,10 @@ select:focus {
       border: solid rgb(140, 124, 124) 2px;
       border-radius: 12px;
     }
+  @keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll-left {
+    animation: scrollLeft 30s linear infinite;
+  }

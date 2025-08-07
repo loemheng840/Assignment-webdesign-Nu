@@ -1,6 +1,6 @@
-# Shelly School Center Website
+# EDU School Center Website
 
-A modern, responsive website for Shelly School Center built with HTML, Tailwind CSS, and JavaScript.
+A modern, responsive website for EDU School Center built with HTML, Tailwind CSS, and JavaScript.
 
 ## 🌟 Features
 
@@ -15,12 +15,13 @@ A modern, responsive website for Shelly School Center built with HTML, Tailwind 
 
 ## 📁 Project Structure
 
-shelly-school-center/
+EDU school-center/
 ├── assets/
 │   ├── css/
 │   │   └── style.css           # Custom styles, includes font setup and other global styles
 │   └── js/
-│       └── main.js             # Main JavaScript logic (DOM, interactivity, etc.)
+│       └── main.js             # Main JavaScript logic (DOM,   interactivity, etc.)
+        |__ include.js
 │
 ├── components/
 │   ├── header.html             # Reusable header component (nav, logo, etc.)
@@ -39,9 +40,9 @@ shelly-school-center/
 
 ## 🚀 Getting Started
 
-1. **Clone or download** the project files
-2. **Open** `index.html` in your web browser
-3. **Navigate** through the different pages using the navigation menu
+
+1. **Open** `index.html` in your web browser
+2. **Navigate** through the different pages using the navigation menu
 
 ## 📱 Pages Overview
 
@@ -146,7 +147,7 @@ This project is created for educational purposes. Feel free to use and modify as
 
 ---
 
-**Built with ❤️ for Shelly School Center**
+**Built with for EDU School Center**
 \`\`\`
 
 This complete website structure includes:
